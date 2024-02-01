@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lotus-test-task/static/css/main.5bdf1388.css",
+    "main.js": "/lotus-test-task/static/js/main.8f727240.js",
+    "index.html": "/lotus-test-task/index.html",
+    "main.5bdf1388.css.map": "/lotus-test-task/static/css/main.5bdf1388.css.map",
+    "main.8f727240.js.map": "/lotus-test-task/static/js/main.8f727240.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bdf1388.css",
+    "static/js/main.8f727240.js"
+  ]
+}
