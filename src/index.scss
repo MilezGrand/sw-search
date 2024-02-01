@@ -30,21 +30,26 @@ input[type=text] {
   width: 100%;
   height: 38px;
   display: block;
-  border: 1px solid grey;
+  border: 1px solid #3375d6;
   max-width: 300px;
   box-sizing: border-box;
   margin: 0;
-}
 
-input[type=text]:focus {
-  outline-color: #fc983c;
+  &[type=text]:focus {
+    outline-color: #3375d6;
+    caret-color: #3375d6;
+  }
+  
+  &[type=text]::placeholder {
+    color: #5a8cd6;
+  }
 }
 
 button {
   border: none;
   height: 40px;
   border-radius: 50px;
-  background-color: #fc983c;
+  background-color: #3375d6;
   color: #fff;
   width: 175px;
   cursor: pointer;
@@ -56,7 +61,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff7d41;
+  background-color: #3375d6;
 }
 
 ul {
@@ -70,42 +75,8 @@ ul {
   margin: 0;
 }
 
-.person {
-  width: 100%;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.person:nth-child(odd) {
-  background-color: rgb(255, 227, 194);
-}
-
-.person__container {
-  padding: 15px;
-}
-
-.person__name {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.person__name img {
-  margin: 0;
-  display: none;
-}
-
-.person {
-  cursor: pointer;
-}
-
-.person:hover img {
-  display: block;
-  
-}
-
-img {
-  display: flex;
-  width: 20px;
-  opacity: 0.5;
+.spinner {
+  width: 50px;
+ display: flex;
+ margin: 0 auto;
 }

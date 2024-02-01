@@ -26,7 +26,7 @@ const App: React.FC = () => {
         />
       </form>
       {isLoading ? (
-        <img src="sw-search/spinner.svg" alt="loading" />
+        <img src="sw-search/spinner.svg" alt="loading" className='spinner'/>
       ) : (
         <>
           <ul>

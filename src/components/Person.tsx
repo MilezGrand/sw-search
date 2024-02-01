@@ -1,7 +1,8 @@
 import React from 'react'
 import { IPerson } from '../types';
+import style from './Person.module.scss';
 
-interface PersonProps {
+export interface PersonProps {
   personInfo: IPerson;
 }
 
@@ -9,12 +10,11 @@ const Person: React.FC<PersonProps> = ({ personInfo }) => {
   const [reveal, setReveal] = React.useState(false);
 
   return (
-    <li className='person'>
-      {reveal ? (
-        <div onClick={() => setReveal(false)} className='person__container'>
-          <p className='person__name'>
+    <li className={style.person}>
+        <div onClick={() => setReveal(!reveal)} className={reveal ? style.person__container_reveal : style.person__container}>
+          <p className={style.person__name}>
             {personInfo.name}
-            <img src='sw-search/hide.svg' />
+            {reveal ? <img src='sw-search/show.svg' /> : <img src='sw-search/hide.svg' />}
           </p>
           <div>
             <p>Height: {personInfo.height} cm</p>
@@ -25,16 +25,7 @@ const Person: React.FC<PersonProps> = ({ personInfo }) => {
             <p>Skin color: {personInfo.skin_color}</p>
           </div>
         </div>
-      ) : (
-        <div onClick={() => setReveal(true)} className='person__container'>
-          <p className='person__name'>
-            {personInfo.name}
-            <img src='sw-search/show.svg' />
-          </p>
-        </div>
-      )}
     </li>
-
   )
 }
 

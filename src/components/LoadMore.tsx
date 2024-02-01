@@ -52,7 +52,7 @@ const LoadMore: React.FC<LoadMoreProps> = ({ searchQuery }) => {
       </ul>
       <div ref={(ref) => setContainerRef(ref)}></div>
       {isLoading ? (
-        <img src='sw-search/spinner.svg' alt='loading' />
+        <img src='sw-search/spinner.svg' alt='loading' className='spinner'/>
       ) : null}
     </>
   );
